@@ -1,71 +1,91 @@
-Aqui está um exemplo de README para o seu projeto Flask. Esse README fornece uma visão geral do projeto, como instalá-lo, executá-lo e utilizar as principais funcionalidades.
 
----
+# Clone-Pinterest
 
-# FakePinterest
+Clone-Pinterest is a web application built with Flask, Python, and SQLite that simulates the basic functionalities of an image-sharing social network, similar to Pinterest. Users can create accounts, log in, upload photos, and view profiles.
 
-FakePinterest é uma aplicação web construída com Flask, Python e SQLite que simula funcionalidades básicas de uma rede social de compartilhamento de imagens, similar ao Pinterest. Os usuários podem criar contas, fazer login, fazer upload de fotos e visualizar perfis.
+## Technologies
 
-## Tecnologias
+- **Python**: Programming language used for the backend.
+- **Flask**: Micro web framework for Python.
+- **SQLAlchemy**: ORM for interacting with the SQLite database.
+- **Flask-Login**: User session management.
+- **SQLite**: Database used to store information.
+- **Werkzeug**: Utility library for file handling.
+- **Flask-WTF**: Integration of WTForms with Flask for creating forms.
+- **Flask-Bcrypt**: Password hashing using Bcrypt.
+- **WTForms**: Library for creating and validating forms.
+- **email-validator**: Email validation for WTForms.
 
-- **Python**: Linguagem de programação usada para o backend.
-- **Flask**: Microframework web para Python.
-- **SQLAlchemy**: ORM para interagir com o banco de dados SQLite.
-- **Flask-Login**: Gerenciamento de sessões de usuário.
-- **SQLite**: Banco de dados utilizado para armazenar informações.
-- **Werkzeug**: Utilitário para manipulação de arquivos.
-
-## Requisitos
+## Requirements
 
 - Python 3.x
 - Flask
 - Flask-Login
 - SQLAlchemy
 - Werkzeug
+- Flask-WTF
+- Flask-Bcrypt
+- WTForms
+- email-validator
 - pytz
-- SQLite (incluso com Python)
+- SQLite (included with Python)
 
+## Installation
 
+1. **Clone the repository:**
 
-## Uso
+   ```bash
+   git clone https://github.com/gabriellemosc/Fake-Pinterest/
+   cd fakepinterest
+   ```
 
-1. **Inicie o servidor Flask:**
+2. **Install dependencies:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Start the Flask server:**
 
    ```bash
    flask run
    ```
 
- .
+## Usage
 
-2. **Funcionalidades:**
+1. **Homepage:** The main page where users can log in.
+2. **Create Account:** Page to create a new user account.
+3. **Profile:** User profile page where they can upload photos and view their own profile or others' profiles.
+4. **Logout:** Option to log out of the current account.
 
-   - **Homepage:** Página inicial onde os usuários podem fazer login.
-   - **Criar Conta:** Página para criar uma nova conta de usuário.
-   - **Perfil:** Página do perfil do usuário onde ele pode fazer upload de fotos e visualizar seu próprio perfil ou o de outros usuários.
-   - **Logout:** Opção para sair da conta atual.
+## Routes
 
-3. **Rotas:**
+- `/`: Main route for login.
+- `/criarconta`: Route to create a new account.
+- `/perfil/<id_usuario>`: Route to view a user's profile, where `<id_usuario>` is the user's ID.
+- `/logout`: Route to log out of the current session.
 
-   - `/`: Rota principal para login.
-   - `/criarconta`: Rota para criar uma nova conta.
-   - `/perfil/<id_usuario>`: Rota para visualizar o perfil de um usuário, onde `<id_usuario>` é o ID do usuário.
-   - `/logout`: Rota para sair da sessão atual.
+## Project Structure
 
-## Estrutura do Projeto
+- `app.py`: Main Flask application file with route definitions.
+- `models.py`: Database model definitions.
+- `forms.py`: Form definitions used in the application.
+- `templates/`: Directory containing HTML templates.
+- `static/`: Directory for static files like CSS and JavaScript.
+- `uploads/`: Directory to store images uploaded by users.
+- `requirements.txt`: List of project dependencies.
 
-- `app.py`: Arquivo principal do aplicativo Flask com a definição das rotas.
-- `models.py`: Definições dos modelos de banco de dados.
-- `forms.py`: Definições dos formulários utilizados na aplicação.
-- `templates/`: Diretório contendo os templates HTML.
-- `static/`: Diretório para arquivos estáticos como CSS e JavaScript.
-- `uploads/`: Diretório para armazenar as imagens enviadas pelos usuários.
-- `requirements.txt`: Lista de dependências do projeto.
+## Contributing
 
-## Contribuição
+1. Fork this repository.
+2. Create a branch for your changes (`git checkout -b my-feature`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin my-feature`).
+5. Open a Pull Request.
 
-1. Faça um fork deste repositório.
-2. Crie uma branch para a sua modificação (`git checkout -b minha-mudanca`).
-3. Faça commit das suas mudanças (`git commit -am 'Adiciona nova funcionalidade'`).
-4. Faça push para a branch (`git push origin minha-mudanca`).
-5. Abra um Pull Request.
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
 
